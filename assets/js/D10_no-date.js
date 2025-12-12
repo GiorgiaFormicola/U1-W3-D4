@@ -396,16 +396,30 @@ console.log("ES.21", allTableData); //test
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
-const getTableDataText = () => {
+/* const getTableDataText = () => {
   const allTableData = document.querySelectorAll("td");
   allTableData.forEach((tableData) => console.log(tableData.innerText));
 };
 
-getTableDataText(); // test
+getTableDataText(); // test */
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+
+const changeLinksBackgroundColor = () => {
+  const allLinks = document.querySelectorAll("a");
+  allLinks.forEach((link) => (link.style.backgroundColor = "red"));
+};
+
+// oppure tramite stile creato in CSS
+
+/* const changeLinksBackgroundColor = () => {
+  const allLinks = document.querySelectorAll("a");
+  allLinks.forEach((link) => link.classList.add("redBackground"));
+}; */
+
+changeLinksBackgroundColor(); // test
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
