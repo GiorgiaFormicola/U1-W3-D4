@@ -65,6 +65,10 @@ console.log("ES.F", me); // test
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
+me.skills.pop();
+
+console.log("ES.G", me); // test
+
 // Funzioni
 
 /* ESERCIZIO 1
