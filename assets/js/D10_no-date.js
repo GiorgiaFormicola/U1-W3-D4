@@ -382,9 +382,15 @@ console.log("ES.20", container); //test */
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-const allTableData = document.getElementsByTagName("td");
+// const allTableData = document.getElementsByTagName("td");
 
-console.log("ES.21", allTableData); //test */
+// oppure
+
+const allTableData = document.querySelectorAll("td");
+
+console.log("ES.21", allTableData); //test
+
+// nel primo caso ottengo un HTMLCollection, nel secondo una NodeList
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
