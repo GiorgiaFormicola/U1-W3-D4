@@ -75,17 +75,17 @@ console.log("ES.G", me); // test */
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-const dice = () => Math.ceil(Math.random() * 6);
+/* const dice = () => Math.ceil(Math.random() * 6);
 
-console.log("ES.1", dice()); // test
+console.log("ES.1", dice()); // test */
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-const whoIsBigger = (numb1, numb2) => Math.max(numb1, numb2);
+/* const whoIsBigger = (numb1, numb2) => Math.max(numb1, numb2);
 
-console.log("ES.2", whoIsBigger(80, 23)); // test
+console.log("ES.2", whoIsBigger(80, 23)); // test */
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -93,16 +93,16 @@ console.log("ES.2", whoIsBigger(80, 23)); // test
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-const splitMe = (string) => string.split(" ");
+/* const splitMe = (string) => string.split(" ");
 
 console.log("ES.3", splitMe("My name is Giorgia")); // test
-
+ */
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
-const deleteOne = (string, boolean) => {
+/* const deleteOne = (string, boolean) => {
   let newString;
   if (boolean === true) {
     newString = string.slice(1);
@@ -113,7 +113,7 @@ const deleteOne = (string, boolean) => {
 };
 
 console.log("ES.4", deleteOne("My name is Giorgia", true)); // test 1
-console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2
+console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2 */
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -121,7 +121,7 @@ console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
-const onlyLetters = (string) => {
+/* const onlyLetters = (string) => {
   const charactersArray = string.split("");
   const onlyLettersArray = charactersArray.filter((character) => isNaN(parseInt(character)));
   const onlyLettersString = onlyLettersArray.reduce((accumulator, currentElement) => accumulator + currentElement, "");
@@ -130,12 +130,12 @@ const onlyLetters = (string) => {
 };
 
 console.log("ES.5", onlyLetters("Ho 5 gatti e 3 tartarughe!"));
-
+ */
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
-const isThisAnEmail = (string) => {
+/* const isThisAnEmail = (string) => {
   if (string.includes("@") && string.includes(".")) {
     return true;
   }
@@ -144,7 +144,7 @@ const isThisAnEmail = (string) => {
 };
 
 console.log("ES.6", isThisAnEmail("giorgia.formicola97@gmail.com")); // test 1
-console.log("ES.6", isThisAnEmail("Mi chiamo Giorgia.")); // test 2
+console.log("ES.6", isThisAnEmail("Mi chiamo Giorgia.")); // test 2 */
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollDice" che riceve un numero come parametro.
@@ -159,7 +159,7 @@ console.log("ES.6", isThisAnEmail("Mi chiamo Giorgia.")); // test 2
   }
 */
 
-const rollDice = (numb) => {
+/* const rollDice = (numb) => {
   const object = {
     sum: 0,
     value: [],
@@ -175,7 +175,7 @@ const rollDice = (numb) => {
 };
 
 console.log("ES.8", rollDice(5)); // test
-
+ */
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
@@ -286,6 +286,45 @@ const movies = [
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+
+const deleteProp = (object, string) => {
+  const propertiesArray = Object.keys(object);
+  let propertyToRemove;
+
+  propertiesArray.forEach((property) => {
+    if (property === string) {
+      propertyToRemove = string;
+    }
+  });
+
+  delete object[propertyToRemove];
+};
+
+const me = {
+  name: "Giorgia",
+  surname: "Formicola",
+  age: 28,
+};
+
+console.log("ES.11", me);
+
+deleteProp(me, "age");
+
+console.log("ES.11", me);
+
+/* const deleteProp = (object, string) => {
+  const propertiesArray = Object.keys(object);
+  propertiesArray.forEach((property) => {
+    typeof property;
+    // if (property === string) {
+    //   delete object.property;
+    // }
+  });
+
+  // return object;
+}; */
+
+// console.log(deleteProp(me, "age"));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
