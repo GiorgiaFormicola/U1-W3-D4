@@ -321,22 +321,41 @@ console.log("ES.15:", onlyInLastMillennium(movies)); // test */
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
-const sumAllTheYears = (arrayOfMovies) => arrayOfMovies.reduce((accumulator, movie) => accumulator + parseInt(movie.Year), 0);
+/* const sumAllTheYears = (arrayOfMovies) => arrayOfMovies.reduce((accumulator, movie) => accumulator + parseInt(movie.Year), 0);
 
-console.log("ES.16", sumAllTheYears(movies));
+console.log("ES.16", sumAllTheYears(movies)); // test */
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-const searchByTitle = (arrayOfMovies, string) => arrayOfMovies.filter((movie) => movie.Title.toLowerCase().includes(string));
+/* const searchByTitle = (arrayOfMovies, string) => arrayOfMovies.filter((movie) => movie.Title.toLowerCase().includes(string));
 
-console.log("ES.17", searchByTitle(movies, "avengers")); // test
+console.log("ES.17", searchByTitle(movies, "avengers")); // test */
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+
+const searchAndDivide = (arrayOfMovies, string) => {
+  const object = {
+    match: [],
+    unmatch: [],
+  };
+
+  arrayOfMovies.forEach((movie) => {
+    if (movie.Title.toLowerCase().includes(string)) {
+      object.match.push(movie);
+    } else {
+      object.unmatch.push(movie);
+    }
+  });
+
+  return object;
+};
+
+console.log("ES.18", searchAndDivide(movies, "avengers")); // test
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
