@@ -102,7 +102,7 @@ console.log("ES.3", splitMe("My name is Giorgia")); // test */
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
-const deleteOne = (string, boolean) => {
+/* const deleteOne = (string, boolean) => {
   let newString;
   if (boolean === true) {
     newString = string.slice(1);
@@ -113,7 +113,7 @@ const deleteOne = (string, boolean) => {
 };
 
 console.log("ES.4", deleteOne("My name is Giorgia", true)); // test 1
-console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2
+console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2 */
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -124,6 +124,17 @@ console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+
+const isThisAnEmail = (string) => {
+  if (string.includes("@") && string.includes(".")) {
+    return true;
+  }
+
+  return false;
+};
+
+console.log("ES.6", isThisAnEmail("giorgia.formicola97@gmail.com")); // test 1
+console.log("ES.6", isThisAnEmail("Mi chiamo Giorgia.")); // test 2
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollDice" che riceve un numero come parametro.
