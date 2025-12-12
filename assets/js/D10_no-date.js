@@ -75,13 +75,17 @@ console.log("ES.G", me); // test */
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-const dice = () => Math.ceil(Math.random() * 6);
+/* const dice = () => Math.ceil(Math.random() * 6);
 
-console.log("ES.1", dice()); // test
+console.log("ES.1", dice()); // test */
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+const whoIsBigger = (numb1, numb2) => Math.max(numb1, numb2);
+
+console.log("ES.2", whoIsBigger(80, 23)); // test
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
