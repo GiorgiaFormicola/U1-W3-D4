@@ -83,15 +83,19 @@ console.log("ES.1", dice()); // test */
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-const whoIsBigger = (numb1, numb2) => Math.max(numb1, numb2);
+/* const whoIsBigger = (numb1, numb2) => Math.max(numb1, numb2);
 
-console.log("ES.2", whoIsBigger(80, 23)); // test
+console.log("ES.2", whoIsBigger(80, 23)); // test */
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
+
+const splitMe = (string) => string.split(" ");
+
+console.log("ES.3", splitMe("My name is Giorgia")); // test
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
