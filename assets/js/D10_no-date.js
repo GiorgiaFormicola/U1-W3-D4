@@ -297,13 +297,17 @@ console.log("ES.12", newestMovie(movies)); // test */
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
-const countMovies = (arrayOfMovies) => arrayOfMovies.length;
+/* const countMovies = (arrayOfMovies) => arrayOfMovies.length;
 
-console.log("ES.13", countMovies(movies)); // test
+console.log("ES.13", countMovies(movies)); // test */
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+
+const onlyTheYears = (arrayOfMovies) => arrayOfMovies.map((movie) => movie.Year);
+
+console.log("ES.14", onlyTheYears(movies)); // test
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
