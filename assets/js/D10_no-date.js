@@ -121,6 +121,19 @@ console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2 */
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+const onlyLetters = (string) => {
+  const charactersArray = string.split("");
+  const onlyLettersArray = charactersArray.filter((character) => isNaN(parseInt(character)));
+  // const lettersStringWithoutExtraSpace  = onlyLettersArray.forEach((character) => {
+  //   if
+  // })
+  const onlyLettersString = onlyLettersArray.reduce((accumulator, currentElement) => accumulator + currentElement, "");
+
+  return onlyLettersString;
+};
+
+console.log("ES.5", onlyLetters("Ho 5 gatti e 3 tartarughe!"));
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
@@ -374,9 +387,9 @@ console.log("ES.19", removeIndex(movies, 2)); // test */
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-const container = document.getElementById("container");
+/* const container = document.getElementById("container");
 
-console.log("ES.20", container); //test
+console.log("ES.20", container); //test */
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -386,9 +399,9 @@ console.log("ES.20", container); //test
 
 // oppure
 
-const allTableData = document.querySelectorAll("td");
+/* const allTableData = document.querySelectorAll("td");
 
-console.log("ES.21", allTableData); //test
+console.log("ES.21", allTableData); //test */
 
 // nel primo caso ottengo un HTMLCollection, nel secondo una NodeList
 
@@ -396,21 +409,21 @@ console.log("ES.21", allTableData); //test
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
-const getTableDataText = () => {
+/* const getTableDataText = () => {
   const allTableData = document.querySelectorAll("td");
   allTableData.forEach((tableData) => console.log("ES.22", tableData.innerText));
 };
 
-getTableDataText(); // test
+getTableDataText(); // test */
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-const changeLinksBackgroundColor = () => {
+/* const changeLinksBackgroundColor = () => {
   const allLinks = document.querySelectorAll("a");
   allLinks.forEach((link) => (link.style.backgroundColor = "red"));
-};
+}; */
 
 // oppure tramite stile creato in CSS
 
@@ -419,13 +432,13 @@ const changeLinksBackgroundColor = () => {
   allLinks.forEach((link) => link.classList.add("redBackground"));
 }; */
 
-changeLinksBackgroundColor(); // test
+/* changeLinksBackgroundColor(); // test */
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-const addNewListElement = () => {
+/* const addNewListElement = () => {
   const myList = document.getElementById("myList");
   const li = document.createElement("li");
   myList.appendChild(li);
@@ -433,27 +446,27 @@ const addNewListElement = () => {
 
 addNewListElement(); // test
 addNewListElement(); // test
-addNewListElement(); // test
+addNewListElement(); // test */
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-const getListEmpty = () => {
+/* const getListEmpty = () => {
   const myList = document.getElementById("myList");
   myList.remove("li");
 };
 
 getListEmpty(); // test
-
+ */
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-const addTestClass = () => {
+/* const addTestClass = () => {
   const allTableRows = document.querySelectorAll("tr");
   allTableRows.forEach((tr) => tr.classList.add("test"));
-};
+}; */
 
 // oppure
 
@@ -462,12 +475,12 @@ const addTestClass = () => {
   allTableRows.forEach((tr) => tr.setAttribute("class", "test"));
 }; */
 
-const allTableRows = document.querySelectorAll("tr");
-allTableRows.forEach((tr) => console.log("ES.26", tr.classList));
+/* const allTableRows = document.querySelectorAll("tr");
+allTableRows.forEach((tr) => console.log("ES.26", tr.classList)); // test
 
 addTestClass();
 
-allTableRows.forEach((tr) => console.log("ES.26", tr.classList));
+allTableRows.forEach((tr) => console.log("ES.26", tr.classList)); // test */
 
 // [EXTRA] JS Avanzato
 
