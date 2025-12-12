@@ -306,31 +306,17 @@ const me = {
   age: 28,
 };
 
-console.log("ES.11", me);
+console.log("ES.11", me); // test
 
 deleteProp(me, "age");
 
-console.log("ES.11", me);
-
-/* const deleteProp = (object, string) => {
-  const propertiesArray = Object.keys(object);
-  propertiesArray.forEach((property) => {
-    typeof property;
-    // if (property === string) {
-    //   delete object.property;
-    // }
-  });
-
-  // return object;
-}; */
-
-// console.log(deleteProp(me, "age"));
+console.log("ES.11", me); // test
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
 
-/* const newestMovie = (arrayOfMovies) => {
+const newestMovie = (arrayOfMovies) => {
   let newestMovie = arrayOfMovies[0];
   arrayOfMovies.forEach((movie) => {
     if (movie.Year > newestMovie.Year) {
@@ -340,54 +326,54 @@ console.log("ES.11", me);
   return newestMovie;
 };
 
-console.log("ES.12", newestMovie(movies)); // test */
+console.log("ES.12", newestMovie(movies)); // test
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
-/* const countMovies = (arrayOfMovies) => arrayOfMovies.length;
+const countMovies = (arrayOfMovies) => arrayOfMovies.length;
 
-console.log("ES.13", countMovies(movies)); // test */
+console.log("ES.13", countMovies(movies)); // test
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
 
-/* const onlyTheYears = (arrayOfMovies) => arrayOfMovies.map((movie) => movie.Year);
+const onlyTheYears = (arrayOfMovies) => arrayOfMovies.map((movie) => movie.Year);
 
-console.log("ES.14", onlyTheYears(movies)); // test */
+console.log("ES.14", onlyTheYears(movies)); // test
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
-/* const onlyInLastMillennium = (arrayOfMovies) => arrayOfMovies.filter((movie) => movie.Year < 2000);
+const onlyInLastMillennium = (arrayOfMovies) => arrayOfMovies.filter((movie) => movie.Year < 2000);
 
-console.log("ES.15:", onlyInLastMillennium(movies)); // test */
+console.log("ES.15:", onlyInLastMillennium(movies)); // test
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
-/* const sumAllTheYears = (arrayOfMovies) => arrayOfMovies.reduce((accumulator, movie) => accumulator + parseInt(movie.Year), 0);
+const sumAllTheYears = (arrayOfMovies) => arrayOfMovies.reduce((accumulator, movie) => accumulator + parseInt(movie.Year), 0);
 
-console.log("ES.16", sumAllTheYears(movies)); // test */
+console.log("ES.16", sumAllTheYears(movies)); // test
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-/* const searchByTitle = (arrayOfMovies, string) => arrayOfMovies.filter((movie) => movie.Title.toLowerCase().includes(string));
+const searchByTitle = (arrayOfMovies, string) => arrayOfMovies.filter((movie) => movie.Title.toLowerCase().includes(string));
 
-console.log("ES.17", searchByTitle(movies, "avengers")); // test */
+console.log("ES.17", searchByTitle(movies, "avengers")); // test
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
-/* const searchAndDivide = (arrayOfMovies, string) => {
+const searchAndDivide = (arrayOfMovies, string) => {
   const object = {
     match: [],
     unmatch: [],
@@ -404,13 +390,13 @@ console.log("ES.17", searchByTitle(movies, "avengers")); // test */
   return object;
 };
 
-console.log("ES.18", searchAndDivide(movies, "avengers")); // test */
+console.log("ES.18", searchAndDivide(movies, "avengers")); // test
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-/* const removeIndex = (array, index) => {
+const removeIndex = (array, index) => {
   array.splice(index, 1);
   return array;
 };
@@ -425,7 +411,7 @@ console.log("ES.19", removeIndex(movies, 2)); // test */
 
 /* const container = document.getElementById("container");
 
-console.log("ES.20", container); //test */
+console.log("ES.20", container); //test
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
