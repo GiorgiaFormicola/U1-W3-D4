@@ -425,6 +425,16 @@ changeLinksBackgroundColor(); // test
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const newListElement = () => {
+  const myList = document.getElementById("myList");
+  const li = document.createElement("li");
+  myList.appendChild(li);
+};
+
+newListElement(); // test
+newListElement(); // test
+newListElement(); // test
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
