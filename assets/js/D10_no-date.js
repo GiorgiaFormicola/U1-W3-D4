@@ -21,12 +21,21 @@ console.log("ES.A", sum); // test */
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
-const random = Math.floor(Math.random() * 21);
-console.log("ES.B", random); // test
+/* const random = Math.floor(Math.random() * 21);
+
+console.log("ES.B", random); // test */
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
+
+const me = {
+  name: "Giorgia",
+  surname: "Formicola",
+  age: 28,
+};
+
+console.log("ES.C", me); // test
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
