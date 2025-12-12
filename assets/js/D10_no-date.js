@@ -57,6 +57,10 @@ console.log("ES.E", me); // test
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
+me.skills.push("Python");
+
+console.log("ES.F", me); // test
+
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
