@@ -338,7 +338,7 @@ console.log("ES.17", searchByTitle(movies, "avengers")); // test */
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
-const searchAndDivide = (arrayOfMovies, string) => {
+/* const searchAndDivide = (arrayOfMovies, string) => {
   const object = {
     match: [],
     unmatch: [],
@@ -355,11 +355,18 @@ const searchAndDivide = (arrayOfMovies, string) => {
   return object;
 };
 
-console.log("ES.18", searchAndDivide(movies, "avengers")); // test
+console.log("ES.18", searchAndDivide(movies, "avengers")); // test */
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+const removeIndex = (array, index) => {
+  array.splice(index, 1);
+  return array;
+};
+
+console.log("ES.19", removeIndex(movies, 2)); // test
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
