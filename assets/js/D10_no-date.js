@@ -450,6 +450,25 @@ getListEmpty(); // test
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+const addTestClass = () => {
+  const allTableRows = document.querySelectorAll("tr");
+  allTableRows.forEach((tr) => tr.classList.add("test"));
+};
+
+// oppure
+
+/* const addTestClass = () => {
+  const allTableRows = document.querySelectorAll("tr");
+  allTableRows.forEach((tr) => tr.setAttribute("class", "test"));
+}; */
+
+const allTableRows = document.querySelectorAll("tr");
+allTableRows.forEach((tr) => console.log(tr.classList));
+
+addTestClass();
+
+allTableRows.forEach((tr) => console.log(tr.classList));
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
