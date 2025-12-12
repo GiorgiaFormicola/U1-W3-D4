@@ -75,9 +75,9 @@ console.log("ES.G", me); // test */
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-/* const dice = () => Math.ceil(Math.random() * 6);
+const dice = () => Math.ceil(Math.random() * 6);
 
-console.log("ES.1", dice()); // test */
+/* console.log("ES.1", dice()); // test */
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -125,7 +125,7 @@ console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2 */
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
-const isThisAnEmail = (string) => {
+/* const isThisAnEmail = (string) => {
   if (string.includes("@") && string.includes(".")) {
     return true;
   }
@@ -134,7 +134,7 @@ const isThisAnEmail = (string) => {
 };
 
 console.log("ES.6", isThisAnEmail("giorgia.formicola97@gmail.com")); // test 1
-console.log("ES.6", isThisAnEmail("Mi chiamo Giorgia.")); // test 2
+console.log("ES.6", isThisAnEmail("Mi chiamo Giorgia.")); // test 2 */
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollDice" che riceve un numero come parametro.
@@ -148,6 +148,23 @@ console.log("ES.6", isThisAnEmail("Mi chiamo Giorgia.")); // test 2
       values: [3, 3, 4]
   }
 */
+
+const rollDice = (numb) => {
+  const object = {
+    sum: 0,
+    value: [],
+  };
+
+  for (let i = 0; i < numb; i++) {
+    const randomNumber = dice();
+    object.sum = object.sum + randomNumber;
+    object.value.push(randomNumber);
+  }
+
+  return object;
+};
+
+console.log("ES.8", rollDice(5)); // test
 
 // Arrays & Oggetti
 
