@@ -13,13 +13,16 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
-const sum = 10 + 20;
+/* const sum = 10 + 20;
 
-console.log("ES.A", sum); // test
+console.log("ES.A", sum); // test */
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
+
+const random = Math.floor(Math.random() * 21);
+console.log("ES.B", random); // test
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
