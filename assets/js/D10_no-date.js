@@ -93,14 +93,27 @@ console.log("ES.2", whoIsBigger(80, 23)); // test */
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-const splitMe = (string) => string.split(" ");
+/* const splitMe = (string) => string.split(" ");
 
-console.log("ES.3", splitMe("My name is Giorgia")); // test
+console.log("ES.3", splitMe("My name is Giorgia")); // test */
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+const deleteOne = (string, boolean) => {
+  let newString;
+  if (boolean === true) {
+    newString = string.slice(1);
+  } else {
+    newString = string.slice(-string.length, -1);
+  }
+  return newString;
+};
+
+console.log("ES.4", deleteOne("My name is Giorgia", true)); // test 1
+console.log("ES.4", deleteOne("My name is Giorgia", false)); // test 2
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
