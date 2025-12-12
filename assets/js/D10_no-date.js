@@ -49,6 +49,10 @@ console.log("ES.D", me); // test
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
+me.skills = ["HTML", "CSS", "JavaScript"];
+
+console.log("ES.E", me); // test
+
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
