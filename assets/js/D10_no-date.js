@@ -374,15 +374,15 @@ console.log("ES.19", removeIndex(movies, 2)); // test */
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-/* const container = document.getElementById("container");
+const container = document.getElementById("container");
 
-console.log("ES.20", container); //test */
+console.log("ES.20", container); //test
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-/* // const allTableData = document.getElementsByTagName("td");
+// const allTableData = document.getElementsByTagName("td");
 
 // oppure
 
@@ -390,18 +390,18 @@ const allTableData = document.querySelectorAll("td");
 
 console.log("ES.21", allTableData); //test
 
-// nel primo caso ottengo un HTMLCollection, nel secondo una NodeList */
+// nel primo caso ottengo un HTMLCollection, nel secondo una NodeList
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
-/* const getTableDataText = () => {
+const getTableDataText = () => {
   const allTableData = document.querySelectorAll("td");
-  allTableData.forEach((tableData) => console.log(tableData.innerText));
+  allTableData.forEach((tableData) => console.log("ES.22", tableData.innerText));
 };
 
-getTableDataText(); // test */
+getTableDataText(); // test
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -463,11 +463,11 @@ const addTestClass = () => {
 }; */
 
 const allTableRows = document.querySelectorAll("tr");
-allTableRows.forEach((tr) => console.log(tr.classList));
+allTableRows.forEach((tr) => console.log("ES.26", tr.classList));
 
 addTestClass();
 
-allTableRows.forEach((tr) => console.log(tr.classList));
+allTableRows.forEach((tr) => console.log("ES.26", tr.classList));
 
 // [EXTRA] JS Avanzato
 
