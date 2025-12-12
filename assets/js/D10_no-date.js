@@ -13,67 +13,71 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
-const sum = 10 + 20;
+/* const sum = 10 + 20;
 
-console.log("ES.A", sum); // test
+console.log("ES.A", sum); // test */
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
-const random = Math.floor(Math.random() * 21);
+/* const random = Math.floor(Math.random() * 21);
 
-console.log("ES.B", random); // test
+console.log("ES.B", random); // test */
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
-const me = {
+/* const me = {
   name: "Giorgia",
   surname: "Formicola",
   age: 28,
 };
 
-console.log("ES.C", me); // test
+console.log("ES.C", me); // test */
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
-delete me.age;
+/* delete me.age;
 
-console.log("ES.D", me); // test
+console.log("ES.D", me); // test */
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
-me.skills = ["HTML", "CSS", "JavaScript"];
+/* me.skills = ["HTML", "CSS", "JavaScript"];
 
-console.log("ES.E", me); // test
+console.log("ES.E", me); // test */
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
-me.skills.push("Python");
+/* me.skills.push("Python");
 
-console.log("ES.F", me); // test
+console.log("ES.F", me); // test */
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
-me.skills.pop();
+/* me.skills.pop();
 
-console.log("ES.G", me); // test
+console.log("ES.G", me); // test */
 
 // Funzioni
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+
+const dice = () => Math.ceil(Math.random() * 6);
+
+console.log("ES.1", dice()); // test
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
